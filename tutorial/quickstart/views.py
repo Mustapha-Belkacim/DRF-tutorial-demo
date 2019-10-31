@@ -9,3 +9,8 @@ class UserViewSet(viewsets.ModelViewSet):
 	queryset = User.objects.all().order_by('-date_joined')
 	serializer_class = UserSerializer
 
+
+class GroupViewSet(viewsets.ModelViewSet):
+	"""API endpoint that allows groups to be viewed or modified"""
+	queryset = Group.objects.all()
+	serializer_class = GroupSerializer
